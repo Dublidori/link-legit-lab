@@ -1,8 +1,21 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import React from 'react';
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonInput,
+  IonButton,
+} from '@ionic/react';
 import './Home.css';
 
 const Home: React.FC = () => {
+  const handleSearchClick = () => {
+    
+    console.log('Search clicked!');
+  };
+
   return (
     <IonPage>
       <IonHeader>
@@ -10,8 +23,12 @@ const Home: React.FC = () => {
           <IonTitle>Blank</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        {/* Aqui é onde vais fazer o layout */}
+      <IonContent fullscreen className="ion-padding">
+        <IonInput placeholder="Put here your store"></IonInput>
+
+        <IonButton expand="full" onClick={handleSearchClick}>
+          Search
+        </IonButton>
 
       </IonContent>
     </IonPage>
