@@ -11,9 +11,22 @@ import {
 import './Home.css';
 
 const Home: React.FC = () => {
-  const handleSearchClick = () => {
+  const handleSearchClick = async () => {
     
-    console.log('Search clicked!');
+    try{
+      const response = await fetch(`https://api.trustpilot.com/v1/business-units/find`)
+
+      if(response.ok){
+        const data = await response.json();
+
+        console.log("API:", data);
+      }else{
+        console.log("error og ythe nirgbeui");
+      }
+
+    }catch(err){
+      console.log(err);
+    }
   };
 
   return (
