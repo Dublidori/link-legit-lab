@@ -1,0 +1,7 @@
+{
+  "name": "link-legit-lab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
